@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="restaurante, Colombia, comida, postre, cafe, Madrid">
+        <meta name="description" content="Restaurante de comida colombiana en Madrid">
+        <meta name="author" content="Sergio Moncada Muñoz">
+        <title>Madrid Paisa</title>
+        <link href="./images/icons/favicon.ico" rel="icon" type="image/x-icon" sizes="32x32"/>
+
+        <!-- Estilos -->
+        <link href="./css/estilos_generales.css" rel="stylesheet">
+        <link href="./css/estilos_reserva.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div id="gridBody">
+            <header id="encabezado">
+                <div id="gridHeader">
+                    <figure id="figLogo">
+                        <img id="logo" src="./images/img/logo.png" alt="Taza de café">
+                    </figure>
+                    <section id="titulos">
+                        <h1>Madrid Paisa</h1>
+                        <h2>Te sentiras como en casa</h2>
+                    </section>
+                </div>
+            </header>
+            
+            <nav id="menuPrincipal" style="text-align: center">
+                <div id="gridNav">
+                    <a id="linkInicio" class="linksNav" href="./index.html" target="_self">Inicio</a>
+                    <a id="linkCarta" class="linksNav" href="./Carta.html" target="_self">Carta</a>
+                    <a id="linkReserva" class="linksNav" href="#" target="_self">Reserva</a>
+                </div>
+            </nav>
+
+            <main id="bloquePrincipal">
+                <div id="gridPrincipal">
+                    <section id="horario">
+                        <h2>RESERVA</h2>
+                        <p>Lunes a Jueves 12m-8pm</p>
+                        <p>Viernes y Sábado 12m-1am</p>
+                        <p>Domingo 12m-4pm</p>
+                    </section>
+
+                    <section id="reserva">
+                        <div id="gridReserva">
+                            <article id="detalles">
+                                <h4>Madrid Paisa</h4>
+                                <h5>Reserva de mesa</h5>
+                                <p>1 hora</p>
+                                <p>Plaza del Cascorro, 12 (La Latina, Madrid)</p>
+                            </article>
+                            <article id="form">
+                                <form id="formulario" method="post" enctype="application/x-www-form-urlencoded" autocomplete="on">
+                                    <fieldset id="datos">
+                                        <div id="gridFormulario">
+                                            <label id="lNombre" for="nombre">Nombre *</label>
+                                            <input id="nombre" class="camposFormulario" type="text" name="nombre" required>
+
+                                            <label id="lApellido" for="apellido">Apellido *</label>
+                                            <input id="apellido" class="camposFormulario" type="text" name="apellido" required>
+
+                                            <label id="lCorreo" for="correo">Correo electrónico *</label>
+                                            <input id="correo" class="camposFormulario" type="email" name="correo" required>
+
+                                            <label id="lCelular" for="celular">Celular *</label>
+                                            <input id="celular" class="camposFormulario" type="tel" name="celular" required>
+
+                                            <label id="lPersonas" for="personas">Número de comensales *</label>
+                                            <select id="personas" class="camposFormulario" required>
+                                                <option value="1" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+
+                                            <label id="lFecha" for="fecha">Fecha *</label>
+                                            <input id="fecha" class="camposFormulario" type="date" value="2024-04-13" required>
+
+                                            <label id="lHora" for="hora">Hora *</label>
+                                            <select id="hora" class="camposFormulario" required>
+                                                <option value="12:00 m">12:00 m</option>
+                                                <option value="01:00 pm">01:00 pm</option>
+                                                <option value="02:00 pm">02:00 pm</option>
+                                                <option value="03:00 pm">03:00 pm</option>
+                                                <option value="04:00 pm">04:00 pm</option>
+                                                <option value="05:00 pm">05:00 pm</option>
+                                                <option value="06:00 pm">06:00 pm</option>
+                                                <option value="07:00 pm">07:00 pm</option>
+                                                <option value="08:00 pm">08:00 pm</option>
+                                                <option value="08:00 pm">09:00 pm</option>
+                                                <option value="10:00 pm">10:00 pm</option>
+                                                <option value="11:00 pm">11:00 pm</option>
+                                                <option value="00:00 am">00:00 am</option>
+                                            </select>
+
+                                            <label id="lComentarios" for="comentarios">Comentarios adicionales</label>
+                                            <textarea id="areatext" class="camposFormulario" rows="5" cols="60" spellcheck="false"></textarea>
+
+                                            <button id="reservar" type="submit">RESERVAR</button>
+                                        </div>
+                                    </fieldset>
+
+                                </form>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <footer id="footer">
+                <div id="gridFooter">
+                    <address>
+                        <menu id="contacto">
+                            <div id="gridContacto">
+                                <h3 id="titleContacto">Contactanos</h3>
+                                <li class="sinViñetas"><figure id="telefono">
+                                    <a href="https://web.whatsapp.com" target="_blank">
+                                        <img src="./images/img/telefono.png" alt="Telefono">
+                                    </a>
+                                </figure></li>
+                                <li class="sinViñetas"><figure id="gmail">
+                                    <a href="https://mail.google.com" target="_blank">
+                                        <img src="./images/img/correo.png" alt="Gmail">
+                                    </a>
+                                </figure></li>
+                                <li class="sinViñetas"><figure id="ubicacion">
+                                    <a href="https://www.google.com/maps" target="_blank">
+                                        <img src="./images/img/ubicacion.png" alt="Ubicacion">
+                                    </a>
+                                </figure></li>
+                            </div>
+                        </menu>
+                    </address>
+                    <menu id="redesSociales">
+                        <div id="gridRedes">
+                            <h3 id="titleRedes">Nuestras Redes</h3>
+                            <li class="sinViñetas"><figure id="facebook">
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <img src="./images/img/facebook.png" alt="Facebook">
+                                </a>
+                            </figure></li>
+                            <li class="sinViñetas"><figure id="instagram">
+                                <a href="https://www.instagram.com" target="_blank">
+                                    <img src="./images/img/instagram.png" alt="Instagram">
+                                </a>
+                            </figure></li>
+                            <li class="sinViñetas"><figure id="twitter">
+                                <a href="https://twitter.com" target="_blank">
+                                    <img src="./images/img/twitter.png" alt="Twitter">
+                                </a>
+                            </figure></li>
+                        </div>
+                    </menu>
+                    <p id="derechos"><small>&COPY; Derechos Reservados 2024</small></p>
+                </div>
+            </footer>
+        </div>    
+    </body>
+</html>

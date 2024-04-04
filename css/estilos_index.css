@@ -1,0 +1,328 @@
+#linkInicio {
+    opacity: 0.7;
+}
+
+#linkInicio:hover {
+    transform: none;
+}
+
+#platosDestacados h3 {
+    color: #a06819;
+    font-size: 30px;
+    text-align: left;
+    margin: 0;
+}
+
+#platosDestacados img {
+    width: 450px;
+    height: 522px;
+    border-radius: 5px;
+}
+
+#platosDestacados p {
+    font-size: 15pt;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+#platosDestacados figure {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+
+#gridPrincipal {
+    width: 99%;
+    display: grid;
+    row-gap: 20px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(5, auto);
+
+    grid-template-areas:"INT INT"
+                        "PD PD"
+                        "PD PD"
+                        "PD PD"
+                        "INV INV";
+}
+ /* ------------------------------------------------------------ */
+#introduccion {
+    margin-bottom: 70px;
+    grid-area: INT;
+}
+
+#introduccion h2 {
+    font-size: 20pt;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+#introduccion h3 {
+    margin: 5px;
+    font-style: italic;
+}
+
+#platosDestacados {
+    grid-area: PD;
+}
+
+#gridPlatosDestacados {
+    width: 100%;
+    display: grid;
+    row-gap: 80px;
+    justify-items: left;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:"BP BP"
+                        "AJ AJ"
+                        "SA SA";
+}
+
+/* ------------------------------------------------------------- */
+#bandejaPaisa {
+    width: 99%;
+    grid-area: BP;
+}
+
+#gridBandejaPaisa {
+    width: 99%;
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:"FBP TBP"
+                        "FBP PBP";
+}
+
+#fig1 {
+    grid-area: FBP;
+}
+
+#tituloBandejaPaisa {
+    align-self: end;
+    grid-area: TBP;
+}
+
+#parrafoBandejaPaisa {
+    align-self: start;
+    grid-area: PBP;
+}
+ /* ------------------------------------------------------------- */
+#ajiaco {
+    grid-area: AJ;
+}
+
+#gridAjiaco {
+    width: 99%;
+    display: grid;
+    margin-left: 80px;
+    row-gap: 20px;
+    column-gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:"TAJ FAJ"
+                        "PAJ FAJ";
+}
+
+#fig2 {
+    grid-area: FAJ;
+}
+
+#tituloAjiaco {
+    align-self: end;
+    padding-left: 70px;
+    grid-area: TAJ;
+}
+
+#parrafoAjiaco {
+    align-self: start;
+    padding-left: 70px;
+    grid-area: PAJ;
+}
+
+/* ------------------------------------------------- */
+#sancocho {
+    grid-area: SA;
+}
+
+#gridSancocho {
+    width: 99%;
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:"FSA TSA"
+                        "FSA PSA";
+}
+
+#fig3 {
+    grid-area: FSA;
+}
+
+#tituloSancocho {
+    align-self: end;
+    grid-area: TSA;
+}
+
+#parrafoSancocho {
+    align-self: start;
+    grid-area: PSA;
+}
+
+/* ----------------------------------------------------- */
+#invitacion {
+    margin-top: 80px;
+    grid-area: INV;
+}
+
+#invitacion h2 {
+    font-size: 20pt;
+}
+
+#invitacion a {
+    padding: 20px;
+    display: inline-block;
+    background-color: #a06819;
+    color: #FFFFFF;
+    font-size: 15pt;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+#invitacion a:hover {
+    transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------- */
+/* DISEÑO RESPONSIVE */
+
+@media screen and (max-width: 1200px) and (min-width: 1051px) {
+    #gridAjiaco {
+        margin-left: 50px;
+    }
+}
+
+/* ----------------------------------------------------------- */
+@media screen and (max-width: 1050px) and (min-width: 651px) {
+    #introduccion {
+        margin-bottom: 20px;
+    }
+
+    #platosDestacados img {
+        width: 405px;
+        height: 470px;
+    }
+
+    #gridPlatosDestacados {
+        margin: 30px 30px 10px 30px;
+        justify-items: center;
+        grid-template-columns: 90%;
+        
+        grid-template-areas:"BP"
+                            "AJ"
+                            "SA";
+    }
+
+    #gridBandejaPaisa {
+        row-gap: 20px;
+        justify-items: center;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas:"TBP"
+                            "FBP"
+                            "PBP";
+    }
+
+    #gridAjiaco {
+        row-gap: 20px;
+        margin-left: 0;
+        justify-items: center;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas:"TAJ"
+                            "FAJ"
+                            "PAJ";
+    }
+    #tituloAjiaco {
+        padding-left: 0;
+    }
+
+    #gridSancocho {
+        row-gap: 20px;
+        justify-items: center;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas:"TSA"
+                            "FSA"
+                            "PSA";
+    }
+}
+
+/* --------------------------------------------------------- */
+@media screen and (max-width: 650px) {
+    #introduccion {
+        margin: 20px;
+    }
+
+    #platosDestacados img {
+        width: 315px;
+        height: 365px;
+    }
+
+    #gridPlatosDestacados {
+        width: 95%;
+        margin: 25px 20px 10px 25px;
+        justify-items: center;
+        grid-template-columns: 90%;
+        
+        grid-template-areas:"BP"
+                            "AJ"
+                            "SA";
+    }
+
+    #gridBandejaPaisa {
+        row-gap: 20px;
+        justify-items: center;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas:"TBP"
+                            "FBP"
+                            "PBP";
+    }
+
+    #gridAjiaco {
+        row-gap: 20px;
+        margin-left: 0;
+        justify-items: center;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas:"TAJ"
+                            "FAJ"
+                            "PAJ";
+    }
+    #tituloAjiaco {
+        padding-left: 0;
+    }
+
+    #gridSancocho {
+        row-gap: 20px;
+        justify-items: center;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas:"TSA"
+                            "FSA"
+                            "PSA";
+    }
+}

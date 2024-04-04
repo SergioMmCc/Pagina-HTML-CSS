@@ -1,0 +1,358 @@
+#linkReserva {
+    opacity: 0.7;
+}
+
+#linkReserva:hover {
+    transform: none;
+}
+
+#gridPrincipal {
+    display: grid;
+    width: 99%;
+    row-gap: 60px;
+    column-gap: 10px;
+    margin-bottom: 100px;
+    grid-template-columns: repeat(2, 49.9%);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas:"HOR HOR"
+                        "RES RES";
+}
+
+#horario {
+    grid-area: HOR;
+}
+
+#gridPrincipal h2 {
+    color: #a06819;
+    font-size: 20pt;
+    margin-top: 100px;
+    margin-bottom: 20px
+}
+
+/* --------------------------------------------- */
+#reserva {
+    grid-area: RES;
+    border-radius: 10px;
+    border: 4px solid #a06819;
+    justify-self: center;
+}
+
+#gridReserva {
+    display: grid;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas:"DET"
+                        "FOR";
+}
+
+/* --------------------------------------------- */
+#detalles {
+    grid-area: DET;
+}
+
+#form {
+    grid-area: FOR;
+    margin-top: 20px;
+}
+
+#detalles h4 {
+    font-size: 22pt;
+    color: #a06819;
+    margin-bottom: 10px;
+}
+
+#detalles h5 {
+    font-size: 18pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#detalles p {
+    font-size: 15pt;
+    margin: 5px;
+}
+
+#datos {
+    padding: 30px 30px 0px 30px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.camposFormulario {
+    border: 1px solid #a06819;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+input, select {
+    width: 300px;
+    height: 40px;
+}
+
+textarea {
+    height: 70px;
+}
+
+input {
+    text-align: left;
+    font-size: 11pt;
+}
+
+option {
+    text-align: left;
+}
+
+#datos label {
+    font-size: 15pt;
+    color: #000000;
+}
+
+#gridFormulario {
+    display: grid;
+    width: 99%;
+    column-gap: 30px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(11, auto);
+    justify-items: start;
+
+    grid-template-areas:"LNOM LAPE"
+                        "NOM APE"
+                        "LCOR LCOR"
+                        "COR COR"
+                        "LCEL LPER"
+                        "CEL PER"
+                        "LFEC LHOR"
+                        "FEC HOR"
+                        "LCOM LCOM"
+                        "COM COM"
+                        "BUT BUT";
+}
+#lNombre {
+    grid-area: LNOM;
+}
+#nombre {
+    grid-area: NOM;
+}
+
+#lApellido {
+    grid-area: LAPE;
+}
+#apellido {
+    grid-area: APE
+}
+
+#lCorreo {
+    grid-area: LCOR;
+}
+#correo {
+    grid-area: COR;
+    width: 400px;
+}
+
+#lCelular {
+    grid-area: LCEL;
+}
+#celular {
+    grid-area: CEL;
+}
+
+#lPersonas {
+    grid-area: LPER;
+}
+#personas {
+    grid-area: PER;
+}
+
+#lFecha {
+    grid-area: LFEC;
+}
+#fecha {
+    grid-area: FEC;
+}
+
+#lHora {
+    grid-area: LHOR;
+}
+#hora {
+    grid-area: HOR;
+}
+
+#lComentarios {
+    grid-area: LCOM;
+}
+#comentarios {
+    grid-area: COM;
+}
+
+#reservar {
+    grid-area: BUT;
+    justify-self: center;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #a06819;
+    font-size: 15pt;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#reservar:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------------------- */
+/* DISEÑO RESPONSIVE */
+@media screen and (max-width: 900px) and (min-width: 651px) {
+    input, select {
+        width: 200px;
+        height: 27px;
+    }
+
+    #gridFormulario {
+        column-gap: 15px;
+        grid-template-columns: 48% 48%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #reserva {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .camposFormulario {
+        margin-bottom: 15px;
+    }
+
+    #form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ------------------------------------------------------ */
+@media screen and (max-width: 650px) and (min-width: 551px) {
+    input, select {
+        width: 120px;
+        height: 16px;
+    }
+    #correo {
+        width: 300px;
+    }
+    textarea {
+        width: 300px;
+    }
+
+    #datos label {
+        font-size: 12pt;
+    }
+
+    #gridFormulario {
+        column-gap: 5px;
+        width: 90%;
+        grid-template-columns: 40% 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #formulario {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #reserva {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .camposFormulario {
+        margin-bottom: 10px;
+    }
+
+    #datos {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    #reservar {
+        margin: 20px;
+        padding: 15px;
+        font-size: 13pt;
+    }
+
+    #form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ---------------------------------------------------------- */
+@media screen and (max-width: 550px) {
+    input, select {
+        width: 120px;
+        height: 16px;
+    }
+    #correo {
+        width: 300px;
+    }
+    textarea {
+        width: 300px;
+    }
+
+    #datos label {
+        font-size: 12pt;
+    }
+
+    #gridFormulario {
+        column-gap: 5px;
+        width: 90%;
+        grid-template-columns: 40% 40%;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    #formulario {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #reserva {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .camposFormulario {
+        margin-bottom: 10px;
+    }
+
+    #datos {
+        padding: 0;
+        margin-bottom: 0;
+        min-width: 65px;
+    }
+
+    #reservar {
+        margin: 20px;
+        padding: 15px;
+        font-size: 13pt;
+    }
+
+    #form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

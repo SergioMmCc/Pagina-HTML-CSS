@@ -1,0 +1,274 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#gridBody {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 16.66%);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:"H H N N N N"
+                        "M M M M M M"                             
+                        "M M M M M M"                           
+                        "F F F F F F";
+}
+
+/* ------------------------------------------------------------------------ */
+/* DISEÑO HEADER */
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #a06819;
+    grid-area: H;
+}
+
+#gridHeader {
+    width: 100%;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:"LH TI TI TI"
+                        "LH TI TI TI"
+                        "LH TI TI TI";
+}
+
+#figLogo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    grid-area: LH;
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+}
+
+#titulos {
+    grid-area: TI;
+    align-self: center;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 25pt;
+    margin: 0;
+}
+
+header h2 {
+    color: #FFFFFF;
+    font-size: 12pt;
+    font-style: italic;
+    margin: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+/* DISEÑO NAV */
+#menuPrincipal {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #a06819;
+    grid-area: N;
+}
+
+#gridNav {
+    width: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 100%;
+    margin: 0;
+}
+
+#menuPrincipal a {
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 18pt;
+    font-style: italic;
+}
+
+.linksNav:hover {
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------------------------------------ */
+/* DISEÑO MAIN */
+main {
+    grid-area: M;
+    background-color: #FFFFFF;
+}
+
+#gridPrincipal {
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* DISEÑO FOOTER */
+
+footer {
+    background-color: #a06819;
+    grid-area: F;
+}
+
+footer h3 {
+    color: #FFFFFF;
+}
+
+#gridFooter {
+    width: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas:"C R"
+                        "DR DR";
+}
+
+.sinViñetas {
+    list-style-type: none;
+    justify-self: center;
+}
+
+.sinViñetas:hover {
+    transform: scale(1.2);
+}
+
+#redesSociales {
+    grid-area: R;
+    padding: 0;
+}
+
+#gridRedes {
+    width: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas:"TR TR TR"
+                        "FB IG TW";
+}
+
+#titleRedes {
+    grid-area: TR;
+}
+
+#facebook {
+    grid-area: FB;
+}
+
+#instagram {
+    grid-area: IG;
+}
+
+#twitter {
+    grid-area: TW;
+}
+
+#contacto {
+    grid-area: C;
+    padding: 0;
+}
+
+#gridContacto {
+    width: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas:"TC TC TC"
+                        "TEL GM UBI";
+}
+
+#titleContacto {
+    grid-area: TC;
+}
+
+#telefono {
+    grid-area: TEL;
+}
+
+#gmail {
+    grid-area: GM;
+}
+
+#ubicacion {
+    grid-area: UBI;
+}
+
+#derechos {
+    color: #FFFFFF;
+    grid-area: DR;
+}
+
+/* ----------------------------------------------------- */
+/* DISEÑO RESPONSIVE */
+
+@media screen and (max-width: 900px) and (min-width: 651px) { /* Tablet */
+    #gridBody {
+        grid-template-columns: repeat(3, 33.3%);
+        grid-template-rows: repeat(4, auto);
+
+        grid-template-areas:"H H H"
+                            "N N N"
+                            "M M M"
+                            "F F F";
+    }
+
+    #gridHeader {
+        grid-template-columns: repeat(6, 16%);
+
+        grid-template-areas:"LH TI TI TI TI TI"
+                            "LH TI TI TI TI TI"
+                            "LH TI TI TI TI TI";
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #gridBody {
+        grid-template-columns: repeat(3, 33.3%);
+        grid-template-rows: repeat(4, auto);
+
+        grid-template-areas:"H H H"
+                            "N N N"
+                            "M M M"
+                            "F F F";
+    }
+
+    #gridFooter {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas:"C"
+                            "R"
+                            "DR";
+    }
+
+    footer menu {
+        margin: 10px;
+    }
+
+    footer figure {
+        margin: 0;
+    }
+}
